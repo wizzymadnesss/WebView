@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            function showSnackBar(number){
+                let message = document.querySelector('#message').value;
+                if(message.trim() != '') {
+                    Android.showSnackBar(message);
+                } else {
+                    Android.showToastMessage("Ingrese texto");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p class="text-center">SnackBar</p>
+        <div class="container">
+            <input type="text" class="border" id="message" placeholder="Enter Message">
+            <input type="button" class="btn" value="Show SnackBar" onclick="showSnackBar()" />
+        </div>
+    </body>
+</html>
